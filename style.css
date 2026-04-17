@@ -1,0 +1,662 @@
+body {
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #111;
+}
+/* NAVBAR */
+.navbar { 
+    background-color: #2c2424;  
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 50px;
+    box-sizing: border-box;
+} 
+ 
+.logo { 
+    color: white; 
+    font-size: 26px;
+    font-family: 'Playfair Display', serif; 
+    margin: 0;
+} 
+ 
+.navlinks { 
+    list-style: none; 
+    display: flex;
+    gap: 30px; 
+    margin: 0; 
+    padding: 0;
+} 
+
+.navbar a { 
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+} 
+
+.navbar a:hover { 
+    color: white;
+}
+
+.navicons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 0;
+}
+
+.dropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.iconbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+}
+
+.iconbtn img {
+    width: 20px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.iconbtn:hover img {
+    opacity: 0.7;
+}
+
+/* CSS Hover Dropdown */
+.navPopup {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 25px;
+    width: 360px;
+    z-index: 1001;
+    cursor: default;
+}
+
+.dropdown-container:hover .navPopup {
+    display: block;
+}
+
+.navPopup::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+/*Cart UI */
+.cartTitle { 
+    font-size: 24px; 
+    font-weight: 400; 
+    margin: 0 0 15px 0; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.cartItem { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.cartItemImg { 
+    width: 65px; 
+    height: 65px; 
+    background-color: #e0e0e0; 
+    object-fit: cover; 
+    border-radius: 4px; 
+}
+
+.cartItemContent { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.cartItemTop { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+}
+
+.cartItemDetails h4 { 
+    margin: 0 0 2px 0; 
+    font-size: 15px; 
+}
+
+.cartItemDetails p { 
+    margin: 0; 
+    font-size: 12px; 
+    color: #666; 
+}
+
+.cartItemPrice { 
+    font-size: 14px; 
+    color: #333; 
+}
+
+.cartSubtotalRow { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 14px; 
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+.cartSubtotalRow strong { 
+    font-weight: 700; 
+    color: #111; 
+}
+
+.btnCheckout {
+    width: 100%; 
+    padding: 12px; 
+    background: #2c2424; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    font-size: 15px; 
+    transition: 0.3s; 
+    text-align: center; 
+    display: inline-block; 
+    box-sizing: border-box; 
+    text-decoration: none;
+}
+
+.btnCheckout:hover { 
+    background: black; 
+}
+
+/*  Search UI  */
+.searchPopupWide { 
+    width: 650px; 
+}
+
+.searchInputWrapper { 
+    position: relative; 
+    margin-bottom: 20px; 
+}
+.searchInputWrapper input { 
+    width: 100%; 
+    padding: 10px 10px 10px 35px; 
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    font-size: 15px; 
+    outline: none; 
+    box-sizing: border-box; 
+}
+
+.searchIconInside { 
+    position: absolute; 
+    left: 5px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 16px; 
+    opacity: 0.4; 
+    filter: invert(1); 
+}
+
+.searchResultsGrid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; 
+}
+
+.searchResultCard { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+}
+
+.searchResultImage { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 6px; 
+    margin-bottom: 10px; 
+}
+
+.searchResultTitle { 
+    margin: 0 0 2px 0; 
+    font-size: 13px; 
+    font-weight: 500; 
+}
+
+.searchResultPrice { 
+    margin: 0; 
+    font-size: 13px; 
+    color: #555; 
+}
+
+/*THE POPUP FOR PRODUCTS OR MODAL*/
+.modalOverlay { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.6); 
+    z-index: 2000; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modalOverlay:target { 
+    display: flex; 
+}
+
+.quickViewBox { 
+    background: white; 
+    width: 800px; 
+    height: 500px; 
+    max-width: 90%; 
+    border-radius: 8px; 
+    display: flex; 
+    overflow: hidden; 
+    position: relative; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2); 
+}
+
+.closeModalBtn { 
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    font-size: 32px; 
+    text-decoration: none;
+    color: #333; 
+    z-index: 10; 
+}
+
+.modalLeft { 
+    flex: 1; 
+    background-color: #d9d9d9; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.modalLeft img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.modalRight { 
+    flex: 1; 
+    padding: 50px 40px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: left; 
+    background: white;
+}
+
+.modalRight span { 
+    font-size: 12px; 
+    color: #666; 
+    margin-bottom: 5px; 
+}
+.modalRight h2 { 
+    font-size: 36px; 
+    font-family: 'Playfair Display', serif; 
+    margin: 0 0 5px 0; 
+    color: #111; 
+}
+
+.modalRight .price { 
+    font-size: 22px; 
+    color: #d9b391; 
+    font-weight: 400; 
+    margin-bottom: 25px; 
+    font-family: 'Inter', sans-serif;
+}
+
+.modalRight p { 
+    font-size: 14px; 
+    color: #444; 
+    line-height: 1.6; 
+    margin-bottom: auto; 
+}
+
+.modalBtnBlack { 
+    width: 100%; 
+    background: black; 
+    color: white; 
+    padding: 14px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 15px; 
+    transition: 0.3s; 
+}
+
+.modalBtnBlack:hover { 
+    background: #333; 
+}
+
+/*top image (Head)*/
+
+.topImage {
+    height: 450px;
+    position: relative;
+    margin: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.topImage::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 60%;
+}
+
+.topImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+.topImage .text {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.topImage h2 { 
+    margin: 0; 
+    font-size: 42px; 
+    font-weight: 500; 
+    color: white; 
+}
+
+.topImage p { 
+    margin-top: 10px; 
+    font-size: 16px; 
+    font-weight: 300; 
+}
+
+h3 { text-align: center; 
+    font-size: 36px; 
+    margin: 60px 0 30px 0; 
+    font-weight: 500; 
+}
+
+.Item-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    margin: 0 40px 80px 40px;
+}
+
+/* Cards act as links*/
+a.card { 
+    display: flex; 
+    flex-direction: column; 
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease; 
+}
+
+/*animation for the products*/
+a.card:hover { 
+    transform: translateY(-5px); 
+}
+
+a.card img { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    background-color: #eaeaea; 
+}
+
+.text h4 { 
+    font-size: 20px; 
+    font-weight: 600; 
+    margin: 15px 0 5px 0; 
+}
+
+.text p.desc { 
+    font-size: 14px; 
+    font-weight: 300; 
+    margin: 0 0 10px 0; 
+    color: #666; }
+
+.text p.price { 
+    font-size: 16px; 
+    font-weight: 600; 
+    margin: 0; 
+    color: #a88b7d; 
+}
+
+/*SHOWCASE AD */
+.showcase {
+    display: flex;
+    background-color: #543D2C;
+    height: 500px;
+    overflow: hidden;
+}
+
+.left-side { 
+    flex: 1; 
+}
+
+.left-side img { 
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+}
+
+.right-side { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 40px; 
+    flex: 1; 
+}
+
+.right-card { 
+    width: 70%; 
+    text-align: center; 
+}
+
+.right-card img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    margin-bottom: 20px;
+}
+
+.right-content h2 { 
+    font-size: 32px; 
+    color: white; 
+    margin: 0 0 10px 0; 
+}
+
+.right-content p { 
+    font-size: 15px; 
+    color: #e0e0e0; 
+    margin: 0 0 30px 0; 
+}
+
+.right-content button { 
+    padding: 12px 40px; 
+    border-radius: 30px; 
+    border: none; 
+    background-color: #2c2424; 
+    color: white; 
+    font-size: 15px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+.right-content button:hover{ 
+    background-color: black; 
+}
+
+.buttonshop { 
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+    margin: 80px 0; 
+}
+
+.buttonshop button { 
+    padding: 15px 50px; 
+    border: none; 
+    background-color: #e4e4e4; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    color: #333; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+.buttonshop button:hover { 
+    background-color: black; 
+    color: white; 
+}
+/*Be a prime (JOIN THE CLUB)*/
+.club { 
+    background-color: #e4e4e4; 
+    padding: 60px 0; 
+    text-align: center; 
+}
+
+.clubInv h2 { 
+    font-size: 36px; 
+    margin: 0 0 10px 0; 
+}
+
+.clubInv p { 
+    font-size: 16px; 
+    color: #555; 
+    margin: 0 0 25px 0; 
+}
+
+.ClubSub { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.ClubSub input { 
+    width: 350px; 
+    padding: 12px 20px; 
+    font-size: 14px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none; 
+}
+
+.ClubSub button { 
+    padding: 0 30px; 
+    border: none; 
+    background-color: #2c2424; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    color: white; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.ClubSub button:hover { 
+    background-color: black; }
+
+.footer{ 
+    background-color: #2c2424; 
+    display: flex; flex-direction: column; 
+    margin-top: auto; 
+}
+
+.top-footer { 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 60px 50px; 
+}
+
+.left-footer h2 { 
+    color: white; 
+    font-size: 32px; 
+    margin: 0 0 10px 0; 
+}
+
+.left-footer p { 
+    color: #ccc; 
+    font-size: 15px; 
+    margin: 0; 
+}
+
+.middle-footer h2 { 
+    color: #c89f81; 
+    font-size: 20px; 
+    margin: 0 0 20px 0; 
+}
+
+.shoplinks { 
+    color: #e0e0e0; 
+    list-style: none; 
+    font-size: 14px; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.shoplinks li { 
+    margin-bottom: 12px; 
+    cursor: pointer; 
+    transition: 0.2s;
+}
+
+.shoplinks li:hover { 
+    color: white; 
+    text-decoration: underline;
+}
+
+.bottom-footer { 
+    background-color: #1f1919; 
+    color: #888; 
+    text-align: center; 
+    font-size: 12px; 
+    padding: 20px 0; 
+}
