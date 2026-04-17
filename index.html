@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>CELENUE | Home</title>
+</head>
+<body>
+    <nav class="navbar"> 
+        <h1 class="logo">CELENUE</h1>
+        <ul class="navlinks">
+            <li><a href="index.html" style="color: white; font-weight: 600;">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li> 
+        </ul>
+
+        <!-- Drop down for signin Icon -->
+        <div class="navicons">
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);"><img src="Assets/Search.png" alt="Search"></button>
+                <div class="navPopup searchPopupWide">
+                    <div class="searchInputWrapper">
+                        <img src="Assets/Search.png" class="searchIconInside">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="searchResultsGrid">
+                        <div class="searchResultCard">
+                            <span class="searchResultCategory">Products</span>
+                            <img src="Assets/Images/BestSeller1.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Driftline Hoodie</h4>
+                            <p class="searchResultPrice">₱899.00</p>
+                        </div>
+                        <div class="searchResultCard">
+                            <span class="searchResultCategory">Products</span>
+                            <img src="Assets/Images/BestSeller2.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Noctra Mist</h4>
+                            <p class="searchResultPrice">₱289.00</p>
+                        </div>
+                        <div class="searchResultCard">
+                            <span class="searchResultCategory">Products</span>
+                            <img src="Assets/Images/BestSeller3.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">DermaLeaf</h4>
+                            <p class="searchResultPrice">₱229.00</p>
+                        </div>
+                        <div class="searchResultCard">
+                            <span class="searchResultCategory">Products</span>
+                            <img src="Assets/Images/BestSeller4.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Velvetie</h4>
+                            <p class="searchResultPrice">₱699.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Drop down for Cart Icon -->
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);"><img src="Assets/Cart.png" alt="Cart"></button>
+                <div class="navPopup">
+                    <h3 class="cartTitle">Cart</h3>
+                    <div class="cartItem">
+                        <img src="Assets/Images/BestSeller1.png" class="cartItemImg">
+                        <div class="cartItemContent">
+                            <div class="cartItemTop">
+                                <div class="cartItemDetails">
+                                    <h4>Driftline Hoodie</h4>
+                                    <p>Minimalist Hoodie</p>
+                                </div>
+                                <div class="cartItemPrice">₱899.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartSubtotalRow">
+                        <span>Subtotal</span>
+                        <strong>₱899.00</strong>
+                    </div>
+                    <a href="checkout.html" class="btnCheckout">Check out</a>
+                </div>
+            </div>
+        <!-- Drop down for signin Icon -->
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);"><img src="Assets/Profile.png" alt="Profile"></button>
+                <div class="navPopup" style="width: 200px;">
+                    <p style="margin: 0 0 15px 0; font-size: 14px;">Welcome back!</p>
+                    <a href="#" class="btnCheckout">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="topImage">
+        <img src="Assets/Images/HomePageMain.png" alt="Hero">
+        <div class="text">
+            <h2>Headline Text</h2>
+            <p>CELENUE Description</p>
+        </div>
+    </div>
+
+    <h3>Best Sellers</h3>
+    <div class="Item-container">
+        <a href="#modal1" class="card">
+            <img src="Assets/Images/BestSeller1.png" alt="Driftline">
+            <div class="text">
+                <h4>Driftline Hoodie</h4>
+                <p class="desc">Lightweight hoodie designed for casual wear.</p>
+                <p class="price">₱899.00</p>
+            </div>
+        </a>
+        <a href="#modal2" class="card">
+            <img src="Assets/Images/BestSeller2.png" alt="Noctra">
+            <div class="text">
+                <h4>Noctra Mist</h4>
+                <p class="desc">Soft floral scent with a warm musky finish.</p>
+                <p class="price">₱289.00</p>
+            </div>
+        </a>
+        <a href="#modal3" class="card">
+            <img src="Assets/Images/BestSeller3.png" alt="DermaLeaf">
+            <div class="text">
+                <h4>DermaLeaf Sunscreen</h4>
+                <p class="desc">Non-greasy sunscreen for everyday protection.</p>
+                <p class="price">₱229.00</p>
+            </div>
+        </a>
+        <a href="#modal4" class="card">
+            <img src="Assets/Images/BestSeller4.png" alt="Velvetie">
+            <div class="text">
+                <h4>Velvetie Skin Set</h4>
+                <p class="desc">Daily skincare bundle for hydration and cleanse.</p>
+                <p class="price">₱699.00</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="showcase">
+        <div class="left-side">
+            <img src="Assets/Images/PromoModel.png">
+        </div>
+        <div class="right-side">
+            <div class="right-card">
+                <img src="Assets/Images/PromoProduct.png">
+                <div class="right-content">
+                    <h2>Alpine Pine</h2>
+                    <p>Fresh Balsam & Pine Eau de Cologne</p>
+                    <a href="products.html"><button>Shop now</button></a>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="buttonshop">
+        <button>Shop Apparel</button>
+        <button>Shop Skincare</button>
+        <button>Shop Fragrances</button>
+    </div>
+
+    <div class="club">
+        <div class="clubInv">
+            <h2>Be a Prime</h2>
+            <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+        </div>
+        <div class="ClubSub">
+            <input type="email" placeholder="Enter your email address">
+            <button>Subscribe</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top-footer">
+            <div class="left-footer">
+                <h2>CELENUE</h2>
+                <p>Where life starts with ease.</p>
+            </div>
+            <div class="middle-footer">
+                <h2>Shop</h2>
+                <ul class="shoplinks">
+                    <li>New Arrivals</li>
+                    <li>Best Sellers</li>
+                    <li>Apparel</li>
+                    <li>Skincare</li>
+                    <li>Kits</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p style="margin: 0;">© 2026 CELENUE Corporation. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+    <!-- POP UP FOR PRODUCTS -->
+    <div id="modal1" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#" class="closeModalBtn">&times;</a>
+            <div class="modalLeft"><img src="Assets/Images/BestSeller1.png" alt="Product"></div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Driftline Hoodie</h2>
+                <div class="price">₱899.00</div>
+                <p>Lightweight hoodie designed for casual wear. Crafted for extreme comfort and modern minimalism.</p>
+                <a href="checkout.html"><button class="modalBtnBlack">Buy now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#" class="closeModalBtn">&times;</a>
+            <div class="modalLeft"><img src="Assets/Images/BestSeller2.png" alt="Product"></div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Noctra Mist</h2>
+                <div class="price">₱289.00</div>
+                <p>Soft floral scent with a warm musky finish. Perfect for evening wear and special occasions.</p>
+                <a href="checkout.html"><button class="modalBtnBlack">Buy now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#" class="closeModalBtn">&times;</a>
+            <div class="modalLeft"><img src="Assets/Images/BestSeller3.png" alt="Product"></div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>DermaLeaf Sunscreen</h2>
+                <div class="price">₱229.00</div>
+                <p>Non-greasy sunscreen for everyday protection. Keeps your skin clear and protected from UV rays.</p>
+                <a href="checkout.html"><button class="modalBtnBlack">Buy now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#" class="closeModalBtn">&times;</a>
+            <div class="modalLeft"><img src="Assets/Images/BestSeller4.png" alt="Product"></div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Velvetie Skin Set</h2>
+                <div class="price">₱699.00</div>
+                <p>Daily skincare bundle for hydration and gentle cleanse. The ultimate grooming essential.</p>
+                <a href="checkout.html"><button class="modalBtnBlack">Buy now</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
