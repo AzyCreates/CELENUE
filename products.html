@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>CELENUE | Products</title>
+</head>
+<body>
+    <nav class="navbar"> 
+        <h1 class="logo">CELENUE</h1>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" style="color: white; font-weight: 600;">Products</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li> 
+        </ul>
+
+        <div class="navicons">
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);">
+                    <img src="Assets/Search.png" alt="Search">
+                </button>
+                <div class="navPopup searchPopupWide">
+                    <div class="searchInputWrapper">
+                        <img src="Assets/Search.png" class="searchIconInside">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="searchResultsGrid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);">
+                    <img src="Assets/Cart.png" alt="Cart">
+                    <span id="cartCount"></span>
+                </button>
+                <div class="navPopup">
+                    <h3 class="cartTitle">Cart</h3>
+                    <div id="cartItemsContainer"></div>
+                    <div class="cartSubtotalRow">
+                        <span>Subtotal</span>
+                        <strong id="cartSubtotal">₱0.00</strong>
+                    </div>
+                    <a href="checkout.html" class="btnCheckout">Check out</a>
+                </div>
+            </div>
+
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);">
+                    <img src="Assets/Profile.png" alt="Profile">
+                </button>
+                <div class="navPopup" style="width: 200px;">
+                    <p style="margin: 0 0 15px 0; font-size: 14px;">Welcome back!</p>
+                    <a href="#!" class="btnCheckout">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-topImage">
+        <h2>Our Collection</h2>
+        <p>Explore our premium range of men's essential</p>
+    </div>
+
+    <div class="sort-section">
+        <div class="search-box">
+            <input type="text" placeholder="Search for essentials">
+        </div>
+        <select class="dropdown">
+            <option>All categories</option>
+            <option>Apparel</option>
+            <option>Fragrance</option>
+            <option>Kits</option>
+            <option>Skincare</option>
+        </select>
+        <select class="dropdown">
+            <option>Sort by: Featured</option>
+            <option>Newest</option>
+            <option>Top Rated</option>
+        </select>
+    </div>
+
+    <div class="Item-container">
+    </div>
+
+    <div class="product-bottom">
+        <h2>You've reach the end.</h2>
+    </div>
+    
+    <div class="footer">
+        <div class="top-footer">
+            <div class="left-footer">
+                <h2>CELENUE</h2>
+                <p>Where life starts with ease.</p>
+            </div>
+            <div class="middle-footer">
+                <h2>Shop</h2>
+                <ul class="shoplinks">
+                    <li><a href="products.html?sort=Newest">New Arrivals</a></li>
+                    <li><a href="products.html?sort=Top Rated">Best Sellers</a></li>
+                    <li><a href="products.html?category=Apparel">Apparel</a></li>
+                    <li><a href="products.html?category=Skincare">Skincare</a></li>
+                    <li><a href="products.html?category=Kits">Kits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p style="margin: 0;">© 2026 CELENUE Corporation. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <div id="modal1" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/DriftlineHoodie_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Driftline Hoodie</h2>
+                <div class="price">₱899.00</div>
+                <p>Lightweight hoodie designed for casual wear.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/NoctraMist_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Noctra Mist</h2>
+                <div class="price">₱289.00</div>
+                <p>Soft floral scent with a warm musky finish.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/DermaLeafSunscreen_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>DermaLeaf Sunscreen</h2>
+                <div class="price">₱229.00</div>
+                <p>Non-greasy sunscreen for everyday protection.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/VelmoraSkinSet_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Velmora Skin Set</h2>
+                <div class="price">₱699.00</div>
+                <p>Daily skincare bundle for hydration and gentle cleanse.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/NovanPoloShirt_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Novan Polo Shirt</h2>
+                <div class="price">₱279.00</div>
+                <p>Smart-casual polo best for semi-formal looks.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal6" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/LumeraGlowSerum_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>Lumera Glow Serum</h2>
+                <div class="price">₱249.00</div>
+                <p>Light serum that helps brighten and smoothen skin.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal7" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/VeluneBloom_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Velune Bloom</h2>
+                <div class="price">₱269.99</div>
+                <p>Sweet floral scent with a gentle fruity touch.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal8" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/GravixGroomKit_groomingkit.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Gravix Groom Kit</h2>
+                <div class="price">₱429.00</div>
+                <p>Groom kit essentials for a neat and clean look.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal9" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/AetherWearBasicTee_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>AetherWear Basic Tee</h2>
+                <div class="price">₱199.00</div>
+                <p>Soft, breathable everyday shirt with a relaxed fit.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal10" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/CindorSpice_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Cindor Spice</h2>
+                <div class="price">₱319.99</div>
+                <p>Warm and slightly spicy fragrance for bold vibe</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal11" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/TrimorPrecisionSet_groomingkit.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Trimor Precision Set</h2>
+                <div class="price">₱299.00</div>
+                <p>Compact grooming tools for detailed trimming.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal12" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/NuviaNightCream_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>Nuvia Night Cream</h2>
+                <div class="price">₱289.00</div>
+                <p>Moisturizing cream designed for overnight skin recovery.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal13" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/DravonNight_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Dravon Night</h2>
+                <div class="price">₱329.99</div>
+                <p>Deep, rich fragrance made for evening use.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal14" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/TrivonCargoPants_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Trivon Cargo Pants</h2>
+                <div class="price">₱529.00</div>
+                <p>Utility-style pants with multiple pockets for ample storage.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal15" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/SilksLotion_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>Silks Lotion</h2>
+                <div class="price">₱189.00</div>
+                <p>A smooth, lightweight lotion designed for everyday use.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal16" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/LustraVeil_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Lustra Veil</h2>
+                <div class="price">₱289.99</div>
+                <p>Elegant scent with soft powdery and floral notes.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal17" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/SoliqueCitrus_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Solique Citrus</h2>
+                <div class="price">₱750.00</div>
+                <p>Bright citrus blend for an energetic and fresh feel.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal18" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/VirexStreetShorts_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Virex Street Shorts</h2>
+                <div class="price">₱249.00</div>
+                <p>Comfortable shorts made for movement and daily use.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal19" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/BarvexBeardKit_groomingkit.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Barvex Beard Kit</h2>
+                <div class="price">₱259.00</div>
+                <p>Complete beard care set for shaping and maintenance.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal20" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/ElrixWindbreaker_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Elrix Windbreaker</h2>
+                <div class="price">₱499.00</div>
+                <p>Light protective jacket ideal for windy or slightly rainy days.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal21" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/GentrixCareKit_groomingkit.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Gentrix Care Kit</h2>
+                <div class="price">₱379.00</div>
+                <p>Daily hygiene kit for quick and easy grooming routines.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal22" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/DermensFacialCleanser_skincare.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Skincare</span>
+                <h2>Dermens Facial Cleanser</h2>
+                <div class="price">₱249.00</div>
+                <p>Lightweight and gentle facial cleanser.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal23" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/MirelEssence_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Mirel Essence</h2>
+                <div class="price">₱299.99</div>
+                <p>Balanced scent combining floral and woody tones.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal24" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/MeloneSummerSet_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Melone Summer Set</h2>
+                <div class="price">₱699.00</div>
+                <p>Comfortable matching top and bottom set.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal25" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/BeardCareKit_groomingkit.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Kits</span>
+                <h2>Beard Care Kit</h2>
+                <div class="price">₱379.00</div>
+                <p>A set that helps keep facial hair clean, and well-shaped.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal26" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/AeruneFresh_perfume.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Fragrance</span>
+                <h2>Aerune Fresh</h2>
+                <div class="price">₱399.99</div>
+                <p>Clean and airy fragrance perfect for everyday wear.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal27" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/DebruneDenimPants_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Debrune Denim Pants</h2>
+                <div class="price">₱499.00</div>
+                <p>Durable denim jeans with a clean, modern cut.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal28" class="modalOverlay">
+        <div class="quickViewBox">
+            <a href="#!" class="closeModalBtn">&times;</a>
+            <div class="modalLeft">
+                <img src="Assets/products/KlyroActiveTank_apparel.png" alt="Product">
+            </div>
+            <div class="modalRight">
+                <span>Apparel</span>
+                <h2>Klyro Active Tank</h2>
+                <div class="price">₱179.00</div>
+                <p>Sleeveless top built for workouts and active lifestyles.</p>
+                <button class="btnAddCart">Add to cart</button>
+                <a href="checkout.html">
+                    <button class="modalBtnBlack">Buy now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

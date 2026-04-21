@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Contact Us - CELENUE</title>
+</head>
+<body style="background-color: white;">
+    <nav class="navbar"> 
+        <h1 class="logo">CELENUE</h1>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html" style="color: white; font-weight: 600;">Contact us</a></li> 
+        </ul>
+
+        <div class="navicons">
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);">
+                    <img src="Assets/Search.png" alt="Search">
+                </button>
+                <div class="navPopup searchPopupWide">
+                    <div class="searchInputWrapper">
+                        <img src="Assets/Search.png" class="searchIconInside">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="searchResultsGrid">
+                        <a href="#modal1" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                            <span class="searchResultCategory">Apparel</span>
+                            <img src="Assets/products/DriftlineHoodie_apparel.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Driftline Hoodie</h4>
+                            <p class="searchResultPrice">₱899.00</p>
+                        </a>
+                        <a href="#modal2" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                            <span class="searchResultCategory">Fragrance</span>
+                            <img src="Assets/products/NoctraMist_perfume.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Noctra Mist</h4>
+                            <p class="searchResultPrice">₱289.00</p>
+                        </a>
+                        <a href="#modal3" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                            <span class="searchResultCategory">Skincare</span>
+                            <img src="Assets/products/DermaLeafSunscreen_skincare.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">DermaLeaf</h4>
+                            <p class="searchResultPrice">₱229.00</p>
+                        </a>
+                        <a href="#modal4" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                            <span class="searchResultCategory">Kits</span>
+                            <img src="Assets/products/VelmoraSkinSet_skincare.png" class="searchResultImage">
+                            <h4 class="searchResultTitle">Velmora Skin Set</h4>
+                            <p class="searchResultPrice">₱699.00</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);">
+                    <img src="Assets/Cart.png" alt="Cart">
+                    <span id="cartCount"></span>
+                </button>
+                <div class="navPopup">
+                    <h3 class="cartTitle">Cart</h3>
+                    
+                    <div id="cartItemsContainer"></div>
+
+                    <div class="cartSubtotalRow">
+                        <span>Subtotal</span>
+                        <strong id="cartSubtotal">₱0.00</strong>
+                    </div>
+                    
+                    <a href="checkout.html" class="btnCheckout">Check out</a>
+                </div>
+            </div>
+
+            <div class="dropdown-container">
+                <button class="iconbtn" style="filter: invert(1);"><img src="Assets/Profile.png" alt="Profile"></button>
+                <div class="navPopup" style="width: 200px;">
+                    <p style="margin: 0 0 15px 0; font-size: 14px;">Welcome back!</p>
+                    <a href="#!" class="btnCheckout">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-layout">
+        <div class="contact-left">
+            <img src="Assets/Images/contactUs.png" alt="Contact Model">
+        </div>
+        <div class="contact-right">
+            <h1>We'd love to hear from you!</h1>
+            <p class="sub">Have a question about your order, our products, or need<br>styling advice? Our dedicated support team is here to help.</p>
+            
+            <form class="form">
+                <input type="text" placeholder="Name" style="margin-top: 50px;">
+                <input type="email" placeholder="Email address">
+                <input type="text" placeholder="Order number (Optional)">
+                <textarea placeholder="Message"></textarea>
+                <button type="button">Submit</button>
+            </form>
+
+            <div class="contact-details">
+                <div class="detail-row">
+                    <img src="Assets/Mail.png">
+                    <span>support@celenue.com</span>
+                </div>
+                <div class="detail-row">
+                    <img src="Assets/Phone.png">
+                    <span>+63 912 345 6789</span>
+                </div>
+                <div class="detail-row">
+                    <img src="Assets/Location.png">
+                    <span>Balanga City, Bataan, Philippines</span>
+                </div>
+                <div class="socials">                
+                    <img class="img" src="Assets/Facebook.png" alt="facebookIcon">
+                    <img class="img" src="Assets/Instagram.png" alt="instagramIcon">
+                    <img class="img" src="Assets/X.com.png" alt="xIcon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="join-club-banner">
+        <h2>Join the<br>Club Now!</h2>
+        <div>
+            <div class="join-club-form">
+                <input type="email" placeholder="Enter your email address">
+                <button class="btnsign">Sign Up</button>
+            </div>
+            <div class="available-badges">
+                <strong>Available on:</strong>
+                <span style="border: 2px solid #000000;">TikTok Shop</span>
+                <span style="border: 2px solid #FF7B00;">Shopee</span>
+                <span style="border: 2px solid #003fab;">Lazada</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <p style="margin: 0;">© 2026 CELENUE Corporation. All Rights Reserved.</p>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

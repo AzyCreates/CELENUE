@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>About Us - CELENUE</title>
+</head>
+<body>
+    <div class="about-wrapper">
+        <nav class="navbar"> 
+            <h1 class="logo">CELENUE</h1>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" style="color: white; font-weight: 600;">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li> 
+            </ul>
+
+            <div class="navicons">
+                <div class="dropdown-container">
+                    <button class="iconbtn" style="filter: invert(1);">
+                        <img src="Assets/Search.png" alt="Search">
+                    </button>
+                    <div class="navPopup searchPopupWide">
+                        <div class="searchInputWrapper">
+                            <img src="Assets/Search.png" class="searchIconInside">
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <div class="searchResultsGrid">
+                            <a href="#modal1" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                                <span class="searchResultCategory">Apparel</span>
+                                <img src="Assets/products/DriftlineHoodie_apparel.png" class="searchResultImage">
+                                <h4 class="searchResultTitle">Driftline Hoodie</h4>
+                                <p class="searchResultPrice">₱899.00</p>
+                            </a>
+                            <a href="#modal2" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                                <span class="searchResultCategory">Fragrance</span>
+                                <img src="Assets/products/NoctraMist_perfume.png" class="searchResultImage">
+                                <h4 class="searchResultTitle">Noctra Mist</h4>
+                                <p class="searchResultPrice">₱289.00</p>
+                            </a>
+                            <a href="#modal3" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                                <span class="searchResultCategory">Skincare</span>
+                                <img src="Assets/products/DermaLeafSunscreen_skincare.png" class="searchResultImage">
+                                <h4 class="searchResultTitle">DermaLeaf</h4>
+                                <p class="searchResultPrice">₱229.00</p>
+                            </a>
+                            <a href="#modal4" class="searchResultCard" style="text-decoration: none; color: inherit;">
+                                <span class="searchResultCategory">Kits</span>
+                                <img src="Assets/products/VelmoraSkinSet_skincare.png" class="searchResultImage">
+                                <h4 class="searchResultTitle">Velmora Skin Set</h4>
+                                <p class="searchResultPrice">₱699.00</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <button class="iconbtn" style="filter: invert(1);">
+                        <img src="Assets/Cart.png" alt="Cart">
+                        <span id="cartCount"></span>
+                    </button>
+                    <div class="navPopup">
+                        <h3 class="cartTitle">Cart</h3>
+                        
+                        <div id="cartItemsContainer"></div>
+
+                        <div class="cartSubtotalRow">
+                            <span>Subtotal</span>
+                            <strong id="cartSubtotal">₱0.00</strong>
+                        </div>
+                        
+                        <a href="checkout.html" class="btnCheckout">Check out</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <button class="iconbtn" style="filter: invert(1);"><img src="Assets/Profile.png" alt="Profile"></button>
+                    <div class="navPopup" style="width: 200px;">
+                        <p style="margin: 0 0 15px 0; font-size: 14px;">Welcome back!</p>
+                        <a href="#!" class="btnCheckout">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="about-content">
+            <h1>Our Story: Where life starts with ease.</h1>
+            <p>CELENUE is a premium e-commerce platform dedicated to providing luxury essentials for men. We believe that true luxury is found in simplicity, quality, and a frictionless experience.</p>
+            <p>Operating on a Direct-to-Consumer (B2C) model, we oversee everything from product development to the final transaction. By cutting out the middleman, we ensure that our catalog of premium apparel, skincare, and fragrances meets the highest standards while delivering an elegant and easy online shopping experience.</p>
+        </div>
+
+        <img src="Assets/Images/AboutUs.png" alt="About CELENUE" class="about-image">
+
+        <div class="bottom-footer" style="margin-top: auto; margin-bottom: 0;">
+            <p style="margin: 0;">© 2026 CELENUE Corporation. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
